@@ -28,8 +28,7 @@
     display: grid;
     box-sizing: border-box;
     align-items: center;
-    justify-content: center;
-    justify-items: center;
+    justify-content: center; 
 }
 
 .login-container {
@@ -55,16 +54,21 @@
     text-align: center
 }
 
-.input-wrapper {
-    position: relative;
-    margin-bottom: 25px;
+.input-wrapper {  
     width: 320px;
-    box-sizing: content-box
+    height: 38px;
+    box-sizing: border-box;
 }
-
-
-
-.login-button {
+ 
+.email-button{
+    display: flex;
+    width:320px;
+    height:30px;
+    padding:20px;
+    align-items: center;
+    justify-content: center;
+}
+.social-button {
     display: flex;
     align-items: center;
     width: 320px;
@@ -78,13 +82,13 @@
     background: #fff;
 }
 
-.login-button img {
+.social-button img {
     width: 20px;
     height: 20px;
     margin-right: 20px;
 }
 
-.login-button span {
+.social-button span {
     font-size: 16px;
 }
 /*
