@@ -17,78 +17,54 @@
         </header>
         <main class="main-container">
 
-            <h1 class="title">do login</h1>
+            <h1 class="title">재방문을 환영합니다!</h1>
 
             <section class="email-section">
-                <p>e mail address</p>
-                <input type="email" class="input-wrapper">
+                <p class="email-section-context">Linkplorer계정으로 가입하여 서비스 이용</p> 
+                <input type="email" class="input-box" placeholder="이메일 주소">
+                <!-- error area start-->
+                <input type="email" class="input-box-error" placeholder="이메일 주소">
+                <p class="error-text"> ⚠️ 이메일이 유효하지 않습니다.</p>
+                <!-- error area end-->
+                <!--input password area start-->
+                <input type="password" class="input-box" placeholder="비밀번호">
+                <input type="password" class="input-box-error" placeholder="비밀번호">
+                <p class="error-text"> ⚠️ 잘못된 이메일 또는 비밀번호 입니다.</p>
+                <p class="other-page"><a href="">혹시 비밀번호를 잊으셨나요?</a></p>
+                <!--input password area end-->
                 <button class="email-button">계속</button>
+
+                <p class="other-page">계정이 없으신가요? <a href="">회원가입</a></p>
             </section>
-            <section class="other-page">
-                <p>메일이 없으면 <a href="">가입해</a></p>
-            </section>
-            <section class="divider">
-                or
-            </section>
+            <div class="divider"><span>또는</span></div>
             <section class="social-section">
                 <button class="social-button">
                     <img src="img/google-logo.svg" alt="Google logo">
                     <span> Google로 계속하기</span></button>
                 <button class="social-button">
-                    <img src="img/apple-logo.svg" alt="Apple logo"> 
+                    <img src="img/apple-logo.svg" alt="Apple logo">
                     <span> Apple로 계속하기</span></button>
-
+                <button class="social-button">
+                    <img src="img/facebook-logo.svg" alt="Facebook logo">
+                    <span> Facebook으로 계속하기</span></button>
+                <button class="social-button">
+                    <img src="img/tiktok-logo.svg" alt="Tiktok logo">
+                    <span> Tiktok으로 계속하기</span></button>
             </section>
         </main>
+        <footer class="foot-area">
+            <p>
+                <!-- 
+                 <a href ="COMMUNITY-GUIDE"> Community Guidelines </a>
+                | 
+                -->
+                <a href="TERMS-OF-USE"> Terms of Use </a>
+                |
+                <a href="PRIVACY-POLICY"> Privacy Policy </a>
+            </p>
+        </footer>
     </div>
 
-
-    <!--
-    <div id="root">
-        <div class="page-wrap">
-            <header class="header-area">
-                 <img src="logo.png" alt="Linkplorer Logo">
-            </header>
-            <main class="container">
-                <section>
-                    <div class="title-wrapper">
-                        <h1 class="title">계정 만들기</h1>
-                    </div>
-                    <div class="login-container">
-                        <div class="input-wrapper">
-                            <input class="email-input" inputmode="email" type="email"
-                                id="email-input" name="email" autocomplete="username" autocapitalize="none"
-                                spellcheck="false" required="" placeholder=""><label class="email-label "
-                                for="email-input">이메일 주소</label>
-                            <div class="invalid-email-error-message "><img class="error-icon"
-                                    src="/assets/error-icon-BaFi8GTB.svg">Email is not valid.</div>
-                            <div class="invalid-email-error-message "><img class="error-icon"
-                                    src="/assets/error-icon-BaFi8GTB.svg">No account registered with this email.</div>
-                        </div><button class="continue-btn" disabled="">계속</button>
-                        <p class="other-page">이미 계정이 있으신가요? 
-                            <a class="other-page-link"
-                                href="https://auth.openai.com/authorize?client_id=TdJIcbe16WoTHtN95nyywh5E4yOo6ItG&amp;scope=openid+email+profile+offline_access+model.request+model.read+organization.read+organization.write&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fchatgpt.com%2Fapi%2Fauth%2Fcallback%2Flogin-web&amp;audience=https%3A%2F%2Fapi.openai.com%2Fv1&amp;device_id=d5066e3d-52ed-4902-a4b8-60325355bef4&amp;prompt=login&amp;check_sso_connection=true&amp;ext-statsig-tier=production&amp;ext-oai-did=d5066e3d-52ed-4902-a4b8-60325355bef4&amp;state=AGW373iizS3d9Z5HmBD3IOuJxo4OiNREwek0ICaVHdE&amp;code_challenge=OHrYw-GnkIAbNk91ruixd72riBd1Exuzzb432wMJLl8&amp;code_challenge_method=S256">로그인</a>
-                        </p>
-                        <div class="divider-wrapper"><span class="divider">또는</span></div>
-                        <div class="social-section"><button class="social-btn"><span class="social-logo-wrapper"><img
-                                        class="social-logo" src="/assets/google-logo-NePEveMl.svg"
-                                        alt="Google 로고"></span><span class="social-text">Google로
-                                    계속하기</span></button><button class="social-btn"><span
-                                    class="social-logo-wrapper"><img class="social-logo"
-                                        src="/assets/microsoft-logo-BUXxQnXH.svg" alt="Microsoft 로고"></span><span
-                                    class="social-text">Microsoft 계정으로 계속하기</span></button><button
-                                class="social-btn"><span class="social-logo-wrapper"><img class="social-logo"
-                                        src="/assets/apple-logo-tAoxPOUx.svg" alt="Apple 로고"></span><span
-                                    class="social-text">Apple로 계속하기</span></button></div>
-                    </div>
-                </section>
-            </main>
-            <footer class="oai-footer"><a href="https://openai.com/policies/terms-of-use">이용약관</a><span
-                    class="separator"></span><a href="https://openai.com/policies/privacy-policy">개인정보 보호 정책</a>
-            </footer>
-        </div>
-    </div>
- -->
 </body>
 
 </html>
