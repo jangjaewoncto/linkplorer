@@ -3,8 +3,10 @@
 
 /*pc*/
 @media (max-width: 992px) {}
+
 /*tablet*/
 @media (min-width: 768px) and (max-width: 991px) {}
+
 /*mobile*/
 @media (max-width: 767px) {}
 
@@ -45,15 +47,95 @@
   --color-gray-darker3: #131516;
 }
 
-body {
-  font-family: var(--main-font);
+div {
+ /* border: solid var(--color-gray-brighter1) 1px;*/
+  box-sizing: border-box;
 }
 
-.font-text{
+body {
+  font-family: var(--main-font);
+  margin: 0;
+}
+
+.context-box {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page-wrap {
+  min-height: 100%;
+  padding: 200px 0 0 0;
+}
+
+.nav-bar {
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  background-color: var(--color-main);
+  box-shadow: var(--color-gray-brighter3) 0 1px 10px 10px;
+  /*수평 수직 흐림  번짐  그림자색상 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar-logo {
+  width: 200px;
+  margin: 20px 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-bar-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.nav-bar-buttons button {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--color-main-brighter2);
+  border: 0;
+  margin: 0 20px;
+  font-size: 14px;    
+  /*font-weight: bold;*/
+}
+
+.nav-bar-buttons button:hover {
+  border: 0; 
+  color: var(--color-sub1);
+}
+
+.adventage-area {
+  color: var(--color-sub1)
+}
+
+.font-text {
   font-family: Arial, Helvetica, sans-serif;
   font-style: bold;
 }
 
-div {
-  border: solid var(--color-gray-brighter1) 1px;
+.flex-row-elements {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  flex-direction: row;
+  width: 90%;
+}
+
+.element {
+  flex: 1 0 0;
+  border: solid var(--color-gray-brighter2) 1px;
+  margin: 10px;
+}
+
+.element-body {
+  display: block;
+}
+
+.element-title {
+  display: block;
+  text-align: center;
 }
