@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content-box-1 {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-and-image {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.text-and-image p {
+    flex: 1;
+    margin: 0;
+    padding-right: 20px;
+}
+
+.text-and-image img {
+    max-width: 200px;
+}
+
+@media (max-width: 994px) {
+    .content-box-1 content{
+        flex-direction:row-reverse;
+    }
+    .text-and-image {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text-and-image img {
+        order: -1; /* 이미지가 가장 먼저 나오도록 설정 */
+        margin-bottom: 20px; /* 이미지와 h1 사이에 여백 추가 */
+    }
+}
+
+@media (max-width: 400px) {
+    .text-and-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-and-image img {
+        order: -1; /* 이미지가 가장 먼저 나오도록 설정 */
+        margin-bottom: 20px; /* 이미지와 h1 사이에 여백 추가 */
+    }
+
+    h1 {
+        margin-bottom: 20px; /* h1과 p 사이에 여백 추가 */
+    }
+}
