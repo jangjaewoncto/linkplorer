@@ -4,7 +4,7 @@
 
 
 :root {
-  --main-font: 'IBM Plex Sans KR', sans-serif;
+  --main-font: 'IBM Plex Sans', sans-serif;
 
   /* Main Color */
   --color-main: #0f52ba;
@@ -52,8 +52,7 @@ body {
 
 .content {
   max-width: var(--width-max);
-  margin: 0 auto;
-  padding: 50px 0;
+  margin: 0 auto; 
   position: relative;
 }
 
@@ -82,22 +81,26 @@ body {
  */
 .content-1 {
   /*  background-image: url(img/bg-content-1.png); */
-  background-color: var(--color-main-brighter3);
-  font-size: 1.5em;
-  padding: 150px 0 50px 0;
+  background-color: #fff; 
+  color: var(--color-gray-brighter1);
+  margin: 150px 0 0 0;
+  padding: 0;
 }
 
 .content-1 h1 {
-  font-size: 4em;
+  font-size: 4.5em;
+  font-weight: 900;
   color: var(--color-main);
-  margin: 100px 0;
+  margin: 70px 0 50px 0;
   text-align: center;
   text-decoration: double;
 }
 
-.content-1 p{
-  margin:0.5em;
+.content-1 p {
+  margin: 0.45em;
+  font-size: 1.3em; 
 }
+
 .content-1 strong {
   color: var(--color-main);
   text-shadow:
@@ -107,26 +110,30 @@ body {
     1px 1px 0 var(--color-main-brighter);
 }
 
-.content-1 .content{
+.content-1 .content {
   text-align: center;
 }
-.content-1 img {
-  width: 250px; 
-  margin: 0px 50px;
+
+.phone-images img {
+  width: 250px;
+  margin: 0px auto;
 }
 
-.content-1 .images{
+.phone-images{
   display: flex;
   overflow: hidden;
   justify-content: center;
+  max-width: 1280px; ;
+  margin: 0 auto;
 }
-
+.content-1 .button-sign-in{
+  margin: 50px 0 0 0;
+}
 .nav-bar {
-  border-radius: 20px;
   position: fixed;
-  inset: 25px 25px auto 25px;
-  background-color: var(--color-main);
-  box-shadow: #00000020 0 1px 15px 5px;
+  inset: 5px 5px auto 5px;
+  background-color: #fff;
+  /* box-shadow: #00000020 0 1px 15px 5px; */
   /*수평 수직 흐림  번짐  그림자색상 */
   display: flex;
   justify-content: space-between;
@@ -151,18 +158,31 @@ body {
   color: var(--color-main-brighter2);
 }
 
-.nav-bar-buttons button {
+.button-default {
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
-  color: var(--color-main-brighter2);
+  color: var(--color-gray-brighter5);
   border: 0;
-  padding: 5px 5px;
-  font-size: 14px;
+  padding: 5px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  min-width: 135px;
+  min-height: 48px;
+  letter-spacing: 0.05em;
   /*font-weight: bold;*/
 }
 
-.nav-bar-buttons button:hover {
+.button-log-in {
+  background-color: var(--color-main-darker1);
+}
+
+.button-sign-in {
+  background-color: var(--color-sub1);
+
+}
+
+.button-default:hover {
   border: 0;
   color: var(--color-sub1);
 }
