@@ -41,7 +41,7 @@
 }
 
 div {
-  border: solid var(--color-gray-brighter1) 1px;
+  /* border: solid var(--color-gray-brighter1) 1px; */
   box-sizing: border-box;
 }
 
@@ -52,7 +52,7 @@ body {
 
 .content {
   max-width: var(--width-max);
-  margin: 0 auto; 
+  margin: 0 auto;
   position: relative;
 }
 
@@ -81,24 +81,27 @@ body {
  */
 .content-1 {
   /*  background-image: url(img/bg-content-1.png); */
-  background-color: #fff; 
+  background-color: #fff;
   color: var(--color-gray-brighter1);
-  margin: 150px 0 0 0;
+  margin: 70px 0 0 0;
   padding: 0;
 }
 
 .content-1 h1 {
-  font-size: 4.5em;
+  font-size: 6em;
   font-weight: 900;
   color: var(--color-main);
-  margin: 70px 0 50px 0;
+  margin: 180px 0 50px 0;
   text-align: center;
   text-decoration: double;
 }
 
 .content-1 p {
-  margin: 0.45em;
-  font-size: 1.3em; 
+  line-height: 1.8em;
+  font-size: 1.3em;
+  max-width: 750px;
+  margin: 50px auto;
+  text-align: center;
 }
 
 .content-1 strong {
@@ -110,7 +113,8 @@ body {
     1px 1px 0 var(--color-main-brighter);
 }
 
-.content-1 .content {
+.content-1 .content,
+.content-2 .content {
   text-align: center;
 }
 
@@ -119,19 +123,87 @@ body {
   margin: 0px auto;
 }
 
-.phone-images{
+.phone-images {
   display: flex;
   overflow: hidden;
   justify-content: center;
-  max-width: 1280px; ;
-  margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 auto 120px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) calc(100% - 50px), rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) calc(100% - 200px), rgba(0, 0, 0, 0) 100%);
+  /* For Safari */
 }
-.content-1 .button-sign-in{
-  margin: 50px 0 0 0;
+
+
+.content-2 {
+  background-color: var(--color-main-darker2);
+  color: var(--color-gray-brighter4);
 }
+
+.content-2 h2 {
+  color: var(--color-sub2-brighter1);
+  font-size: 4em;
+  margin: 100px 0;
+}
+
+.content-2 ol {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+}
+
+.content-2 .sub-context {
+  font-size: 1.4em;
+  line-height: 1.8em;
+}
+
+.content-2 li {
+  list-style: none;
+  background-color: var(--color-gray-brighter5);
+  color: var(--color-main-darker2);
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  display: flex;
+  /* Flexbox 사용 */
+  flex-direction: column;
+  /* 수직 정렬 */
+  justify-content: flex-start;
+  /* 내용 상단 정렬 */
+  align-items: center;
+  /* 내용 상단 정렬 */
+}
+
+.content-2 li h3 {
+  margin: 20px 0;
+  font-size: 1.8em;
+}
+
+.content-2 li div {
+  height: 200px;
+  width: 100%;
+}
+
+.content-2 li img {
+  width: 100%;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.content-2 li p {
+  flex: 1;
+  font-size: 1.2em;
+}
+
 .nav-bar {
   position: fixed;
-  inset: 5px 5px auto 5px;
+  inset: 0 0 auto 0;
+  height: 70px;
   background-color: #fff;
   /* box-shadow: #00000020 0 1px 15px 5px; */
   /*수평 수직 흐림  번짐  그림자색상 */
@@ -142,8 +214,8 @@ body {
 }
 
 .nav-bar-logo {
-  width: 200px;
-  margin: 20px 30px;
+  width: 250px;
+  margin: auto 30px;
   display: flex;
   gap: 20px;
 }
@@ -154,21 +226,18 @@ body {
   margin: 0 30px 0 0;
 }
 
-.nav-bar-buttons p {
-  color: var(--color-main-brighter2);
-}
-
 .button-default {
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
   color: var(--color-gray-brighter5);
   border: 0;
-  padding: 5px 20px;
+  padding: 3px 20px;
+  font-family: var(--main-font);
   font-size: 16px;
   border-radius: 10px;
-  min-width: 135px;
-  min-height: 48px;
+  min-width: 136px;
+  min-height: 34px;
   letter-spacing: 0.05em;
   /*font-weight: bold;*/
 }
@@ -184,7 +253,8 @@ body {
 
 .button-default:hover {
   border: 0;
-  color: var(--color-sub1);
+  color: var(--color-gray-brighter5);
+  background-color: var(--color-gray-brighter1);
 }
 
 
@@ -193,12 +263,29 @@ body {
   :root {
     --width-max: 90%;
   }
-
+  .content-1,
+  .content-2,
+  .content-3,
+  .content-4,
+  .content-5 {
+    padding: 10px 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   :root {
     --width-max: 750px;
+  }
+
+  .content-1,
+  .content-2,
+  .content-3,
+  .content-4,
+  .content-5 {
+    padding: 10px 0;
+  }
+  .phone-images img { 
+    margin: 0px 20px;
   }
 }
 
@@ -206,16 +293,10 @@ body {
 @media (max-width: 767px) {
   :root {
     --width-max: 90%;
-  }
-
-  .text-and-image {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .text-and-image img {
-    order: -1;
-    margin: 15px 0;
-  }
+  } 
+}
+.phone-images img { 
+  margin: 0px 15px;
+}
 
 }
