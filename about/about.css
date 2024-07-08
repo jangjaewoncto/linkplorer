@@ -4,8 +4,8 @@
 
 
 :root {
-  --main-font: 'IBM Plex Sans', sans-serif;
-
+  --main-font: 'IBM Plex Sans', sans-serif, ;
+  --width-max: 95%;
   /* Main Color */
   --color-main: #0f52ba;
 
@@ -47,6 +47,7 @@ div {
 
 body {
   font-family: var(--main-font);
+  font-weight: 400;
   margin: 0;
 }
 
@@ -79,6 +80,19 @@ body {
 /* 
  background: linear-gradient(45deg, rgba(var(--color-sub2-brighter1), 0.3), rgba(var(--color-sub1-brighter1),0.3));
  */
+
+
+
+.content-5{
+  background-color:var(--color-main-darker1); 
+  clip-path: ellipse(70% 100% at center top);
+} 
+.content-5 .content {
+  text-align: center;
+  padding: 80px 0;
+  font-size: 1.8em;
+  color: #fff;
+}
 .content-1 {
   /*  background-image: url(img/bg-content-1.png); */
   background-color: #fff;
@@ -97,7 +111,7 @@ body {
 }
 
 .content-1 p {
-  line-height: 1.8em;
+  line-height: 1.5em;
   font-size: 1.3em;
   max-width: 750px;
   margin: 50px auto;
@@ -113,8 +127,7 @@ body {
     1px 1px 0 var(--color-main-brighter);
 }
 
-.content-1 .content,
-.content-2 .content {
+.content-1 .content {
   text-align: center;
 }
 
@@ -134,69 +147,93 @@ body {
   /* For Safari */
 }
 
-
 .content-2 {
   background-color: var(--color-main-darker2);
   color: var(--color-gray-brighter4);
 }
 
+.content-2 .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .content-2 h2 {
   color: var(--color-sub2-brighter1);
   font-size: 4em;
-  margin: 100px 0;
+}
+
+.content-2 .sub-context {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+
+.content-2 .content .content-wrapper {
+  flex: 4;
+  max-width: 1000px;
 }
 
 .content-2 ol {
+
+  max-width: 800px;
   margin: 100px 0;
   display: flex;
+  flex: 3;
+  flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   padding: 0;
 }
 
-.content-2 .sub-context {
-  font-size: 1.4em;
-  line-height: 1.8em;
-}
-
 .content-2 li {
-  list-style: none;
-  background-color: var(--color-gray-brighter5);
-  color: var(--color-main-darker2);
   flex: 1;
+  list-style: none;
+  background-color: #fff;
+  color: var(--color-main-darker2);
   margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 25px;
+  border-radius: 20px;
   box-sizing: border-box;
 
   display: flex;
-  /* Flexbox 사용 */
-  flex-direction: column;
-  /* 수직 정렬 */
-  justify-content: flex-start;
-  /* 내용 상단 정렬 */
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  /* 내용 상단 정렬 */
+
+  -webkit-box-shadow: 8px 12px 26px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 12px 26px 0 rgba(0, 0, 0, 0.05);
 }
 
 .content-2 li h3 {
-  margin: 20px 0;
+  margin: 15px 0;
   font-size: 1.8em;
+  color: var(--color-main);
 }
 
-.content-2 li div {
-  height: 200px;
+.content-2 .content li .content-wrapper {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 auto 15px;
+}
+
+.content-2 .content li .image-wrapper {
+  flex: 2;
+  height: 180px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .content-2 li img {
-  width: 100%;
-  max-width: 90%;
+  height: 90%;
   max-height: 90%;
+  margin: auto 0;
 }
 
 .content-2 li p {
-  flex: 1;
   font-size: 1.2em;
 }
 
@@ -258,45 +295,45 @@ body {
 }
 
 
-/*pc*/
-@media (min-width: 992px) {
-  :root {
-    --width-max: 90%;
-  }
-  .content-1,
-  .content-2,
-  .content-3,
-  .content-4,
-  .content-5 {
-    padding: 10px 0;
-  }
+/*pc too wide*/
+@media (min-width: 1900px) {
+
+  .content-1 .content,
+  .content-2 .content,
+  .content-3 .content,
+  .content-4 .content,
+  .content-5 .content {
+    max-width: 1900px;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  :root {
-    --width-max: 750px;
-  }
+/*pc*/
+@media (min-width: 992px) {
+  
 
-  .content-1,
-  .content-2,
-  .content-3,
-  .content-4,
-  .content-5 {
-    padding: 10px 0;
-  }
-  .phone-images img { 
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 991px) { 
+  .phone-images img {
     margin: 0px 20px;
   }
 }
 
 /*mobile*/
 @media (max-width: 767px) {
-  :root {
-    --width-max: 90%;
-  } 
-}
-.phone-images img { 
-  margin: 0px 15px;
-}
+ 
+
+  .content-1,
+  .content-2,
+  .content-3,
+  .content-4,
+  .content-5 {
+    padding: 0;
+  }
+
+  .phone-images img {
+    margin: 0px 15px;
+  }
 
 }
