@@ -88,12 +88,11 @@ header hr {
   background-color: transparent;
   color: var(--color-gray-brighter5);
   border: 1px solid #000;
-  padding: 3px 15px;
+  padding: 5px 20px;
   font-family: var(--main-font);
-  font-size: 15px;
+  font-size: 1.2em;
   border-radius: 16px;
-  height: 32px;
-  letter-spacing: 0.05em;
+  height: auto;
   /*font-weight: bold;*/
 }
 
@@ -130,14 +129,15 @@ header hr {
   background-position: center;
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 .content-1 .content,
 .content-2 .content,
 .content-3 .content,
 .content-4 .content,
-.content-5 .content {
+.content-5 .content,
+footer .content {
   max-width: var(--width-max);
   margin: 0 auto;
   position: relative;
@@ -147,6 +147,9 @@ header hr {
 .content-1 .button-sign-in {
   color: #fff;
   border: solid 1px #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  margin: 15px 0;
 }
 
 .content-1 .button-sign-in:hover {
@@ -162,23 +165,21 @@ header hr {
 .content-1 {
   /*  background-image: url(img/bg-content-1.png); */
   color: var(--color-gray-brighter4);
-  margin: 70px 0 0 0;
-  padding: 0;
+
 }
 
 .content-1 h1 {
-  font-size: 4em;
-  font-weight: 600;
-  color: var(--color-main);
-  margin: 90px 0 0 0;
+  font-size: 5em;
+  font-weight: 700;
+  margin: 0;
   text-align: center;
   text-decoration: double;
 }
 
 .content-1 p {
-  line-height: 1.5em;
-  font-size: 0.95em;
-  font-weight: 200;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  font-weight: 300;
   max-width: 750px;
   margin: 20px auto;
   text-align: center;
@@ -198,23 +199,22 @@ header hr {
 }
 
 .phone-images img {
-  width: 200px;
-  margin: 50px 0;
+  width: 440px;
 }
 
 .phone-images {
   display: flex;
   overflow: hidden;
   justify-content: center;
-  max-width: 1100px;
-  margin: 50 auto 120px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) calc(100% - 50px), rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) calc(100% - 200px), rgba(0, 0, 0, 0) 100%);
+  max-width: 90%;
+  margin: 60 auto 60px;
+  /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) calc(100% - 50px), rgba(0, 0, 0, 0) 100%); */
+  /* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) calc(100% - 200px), rgba(0, 0, 0, 0) 100%); */
   /* For Safari */
 }
 
 .content-2 {
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 .content-2 .content {
@@ -222,27 +222,31 @@ header hr {
   flex-direction: column;
 }
 
-.content-3 .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
 .content-2 h2,
-.content-3 h2 {
-  color: var(--color-sub2-darker1);
-  font-size: 3.2em;
+.content-3 h2,
+.content-4 h2 {
+  font-weight: 700;
+  font-size: 4em;
+  margin: 20px 0;
 }
 
-.content-2 .sub-context {
-  font-size: 1.3em;
-  line-height: 1.em;
-} 
-  
+.content-2 h2 {
+  color: var(--color-sub2-darker1);
+}
+
+.content-2 .sub-context,
+.content-3 .sub-context,
+.content-4 .sub-context {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  font-weight: 300;
+  margin: 1.4em 0;
+}
+
 .content-2 ol {
   display: flex;
   padding: 0;
+  margin: 60px 0;
 }
 
 .content-2 li {
@@ -251,7 +255,7 @@ header hr {
   background-color: #fff;
   color: var(--color-main-darker2);
   border: 1px solid var(--color-gray-brighter2);
-  margin: 5px;
+  margin: 10px;
   padding: 30px;
   /* border-radius: 20px; */
   box-sizing: border-box;
@@ -260,44 +264,113 @@ header hr {
 }
 
 .content-2 .content li img {
-  width: 60%;
+  width: 20%;
   max-width: 180px;
+  padding: 0 0 60px 0;
 }
+
 .content-2 li h3 {
-  margin: 0;
-  font-size: 0.8em;
+  font-size: 1.2em;
   color: var(--color-main);
+  margin: 0.5em 0;
 }
+
 .content-2 li h4 {
-  margin:  0;
-  font-size: 1.8em; 
+  margin: 0;
+  font-size: 2em;
 }
 
 .content-2 li p {
   font-size: 1.2em;
+  margin: 0.5em 0;
 }
- 
+
+
+.content-3 {
+  background-color: var(--color-main-brighter2);
+}
+
+.content-3 .sub-context {
+  max-width: 100%;
+}
+
+.content-3 .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-3 .content-wrapper {
+  flex: 1;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-3 .image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 15px;
+}
+
 .content-3 img {
-  height: 90%;
-  max-height: 90%;
-  margin: auto auto;
+  margin: auto 0 auto auto;
 }
 
-
-
-.content-5 {
-  background-color: var(--color-main-darker1);
-  clip-path: ellipse(70% 100% at center top);
+.content-3 button {
+  color: #000;
+  margin: 50px auto 0 0;
+  font-weight: 700;
+  border: solid #000 2px;
 }
 
-.content-5 .content {
+.content-3 button:hover {
+  margin: 50px auto 0 0;
+  font-weight: 700;
+  border: solid #000 2px;
+}
+
+/* 
+.content-4 {
+ background-color: var(--color-main-darker1);
+clip-path: ellipse(70% 100% at center top); 
+}
+*/
+.content-4 .content {
   text-align: center;
-  padding: 80px 0;
-  font-size: 1.8em;
   color: #fff;
 }
 
+.content-4 h2 strong {
+  color: var(--color-main);
+  font-size: 1.2em;
+}
 
+.content-4 .button-sign-in {
+  background-color: var(--color-main);
+  color: #fff;
+  font-size: 1.5em;
+  height: auto;
+  padding: 20px 50px;
+  margin: 50px 0;
+}
+
+.content-4 .button-sign-in:hover {
+  background-color: var(--color-sub1);
+}
+
+footer {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #fff;
+  color: var(--color-gray);
+}
+
+footer img {
+  width: 20px;
+  vertical-align: middle;
+}
 
 @media (max-width:1400px) {
 
@@ -305,7 +378,8 @@ header hr {
   .content-2 .content,
   .content-3 .content,
   .content-4 .content,
-  .content-5 .content {
+  .content-5 .content,
+  footer .content {
     max-width: 90%;
   }
 }
@@ -324,7 +398,8 @@ header hr {
   .content-2 .content,
   .content-3 .content,
   .content-4 .content,
-  .content-5 .content {
+  .content-5 .content,
+  footer .content {
     margin: 0 60px;
   }
 
@@ -332,14 +407,15 @@ header hr {
   .content-2,
   .content-3,
   .content-4,
-  .content-5 {
+  .content-5,
+  footer {
     padding: 0;
   }
 
   .phone-images img {
     margin: 0px 15px;
   }
- 
+
   .content-2 ol {
     display: flex;
     flex-direction: column;
