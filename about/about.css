@@ -139,9 +139,10 @@ header hr {
 .content-4 .content,
 .content-5 .content,
 footer .content {
-  max-width: min(var(--width-max), 90%);
-  margin: 0 auto;
+  max-width: min(var(--width-max), 100%);
+  margin: 0 auto; ;
   position: relative;
+  padding: 10px;
 }
 
 
@@ -404,21 +405,7 @@ footer .copyrights{
   /* justify-content: space-between;  */
 } 
 
-
-/*
-@media (max-width:1400px) {
-
-  .content-1 .content,
-  .content-2 .content,
-  .content-3 .content,
-  .content-4 .content,
-  .content-5 .content,
-  footer .content {
-    max-width: 90%;
-  }
-}
-*/
-
+ 
 /*pc*/
 @media (min-width: 581px) and (max-width: 1080px) {
 
